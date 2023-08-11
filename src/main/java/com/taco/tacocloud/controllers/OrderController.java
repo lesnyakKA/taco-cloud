@@ -25,10 +25,10 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(@Valid TacoOrder order, Errors errors, SessionStatus sessionStatus) {
-        if(errors.hasErrors()) {
-            return "orderForm";
-        }
+    public String processOrder(TacoOrder order, SessionStatus sessionStatus) {
+//        if(errors.hasErrors()) {
+//            return "orderForm";
+//        }
         log.info("Order submitted: {}", order);
         sessionStatus.setComplete();
         return "redirect:/";
