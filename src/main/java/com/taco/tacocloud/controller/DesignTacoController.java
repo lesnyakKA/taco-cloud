@@ -1,4 +1,4 @@
-package com.taco.tacocloud.controllers;
+package com.taco.tacocloud.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.taco.tacocloud.entity.Ingredient;
-import com.taco.tacocloud.entity.Ingredient.Type;
-import com.taco.tacocloud.entity.Taco;
-import com.taco.tacocloud.entity.TacoOrder;
+import com.taco.tacocloud.model.Ingredient;
+import com.taco.tacocloud.model.Ingredient.Type;
+import com.taco.tacocloud.model.Taco;
+import com.taco.tacocloud.model.TacoOrder;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -71,7 +71,6 @@ public class DesignTacoController {
         }
         tacoOrder.addTaco(taco);
         log.info("Processing taco: {}", taco);
-
         return "redirect:/orders/current";
     }
 

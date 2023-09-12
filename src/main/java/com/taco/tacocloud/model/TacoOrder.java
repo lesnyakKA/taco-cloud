@@ -1,4 +1,4 @@
-package com.taco.tacocloud.entity;
+package com.taco.tacocloud.model;
 
 import java.util.ArrayList;
 import java.util.List;

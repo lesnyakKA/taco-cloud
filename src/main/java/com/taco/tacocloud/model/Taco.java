@@ -1,8 +1,6 @@
-package com.taco.tacocloud.entity;
+package com.taco.tacocloud.model;
 
 import java.util.List;
-
-import com.taco.tacocloud.entity.Ingredient;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
